@@ -60,8 +60,6 @@ public class GeminiManager
             @Override
             public void resumeWith(@NonNull Object response)
             {
-                Log.d("GeminiManager", "Received object of type: " + response.getClass().getSimpleName());
-                Log.d("GeminiManager", "Received object: " + response.toString());
                 new android.os.Handler(android.os.Looper.getMainLooper()).post(new Runnable()
                 {
                     @Override
@@ -89,7 +87,6 @@ public class GeminiManager
                             }
                             else
                             {
-                                Log.e("GeminiManager", "Received unexpected response type: " + response.getClass().getName());
                                 callback.onFailure(new Throwable("Something went wrong with the response generation"));
                             }
                         }

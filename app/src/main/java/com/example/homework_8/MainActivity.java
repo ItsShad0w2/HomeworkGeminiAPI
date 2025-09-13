@@ -59,8 +59,6 @@ public class    MainActivity extends AppCompatActivity
                 requestPermissions();
             }
         });
-
-        Log.d("API_KEY", "The API key is: " + BuildConfig.GeminiAPIKey);
     }
 
     private void requestPermissions()
@@ -124,7 +122,6 @@ public class    MainActivity extends AppCompatActivity
         catch (IOException e)
         {
             Toast.makeText(MainActivity.this, "Something went wrong with creating the file", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
         }
     }
 
